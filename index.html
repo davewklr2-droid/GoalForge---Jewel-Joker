@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>George Whitaker | GoalForge - Jewel Joker</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --accent: #f59e0b; /* Amber Forge */
+            --secondary: #10b981; /* Jewel Emerald */
+            --glass: rgba(255, 255, 255, 0.03);
+            --text: #e2e8f0;
+        }
+        body {
+            margin: 0; padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+            background: var(--bg);
+            background-image: radial-gradient(circle at 0% 0%, rgba(245, 158, 11, 0.1) 0%, transparent 50%),
+                              radial-gradient(circle at 100% 100%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+            color: var(--text);
+            display: flex; flex-direction: column; align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%; max-width: 500px;
+            padding-top: calc(env(safe-area-inset-top) + 60px);
+            padding-bottom: 40px; box-sizing: border-box;
+            display: flex; flex-direction: column; gap: 20px; padding-left: 20px; padding-right: 20px;
+        }
+        .nav {
+            display: flex; justify-content: space-around;
+            background: var(--glass); backdrop-filter: blur(20px);
+            padding: 12px; border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky; top: 60px; z-index: 100;
+        }
+        .nav a {
+            text-decoration: none; color: #94a3b8; font-size: 13px;
+            font-weight: 600; text-transform: uppercase; letter-spacing: 1px;
+            padding: 8px 10px; transition: 0.3s;
+        }
+        .nav a.active { color: var(--accent); text-shadow: 0 0 8px var(--accent); }
+        
+        .card {
+            background: var(--glass); border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px; padding: 35px; text-align: center;
+            backdrop-filter: blur(30px); animation: slideUp 0.8s ease;
+        }
+        .app-icon {
+            width: 90px; height: 90px;
+            background: linear-gradient(135deg, #f59e0b, #b45309);
+            border-radius: 22px; margin: 0 auto 20px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 45px; box-shadow: 0 10px 30px rgba(245, 158, 11, 0.2);
+        }
+        h1 { font-size: 24px; margin: 0; color: #fff; line-height: 1.2; }
+        .dev-badge { font-size: 12px; color: var(--accent); margin-top: 10px; font-weight: bold; letter-spacing: 2px; }
+        .btn-link {
+            background: var(--accent); color: #000;
+            padding: 18px; border-radius: 18px; text-decoration: none;
+            font-weight: 800; text-align: center; margin-top: 10px;
+            transition: 0.3s; box-shadow: 0 5px 15px rgba(245, 158, 11, 0.3);
+        }
+        .btn-link:active { transform: scale(0.97); }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html" class="active">Profile</a>
+            <a href="marketing.html">Mission</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="support.html">Contact</a>
+        </div>
+
+        <div class="card">
+            <div class="app-icon">⚒️</div>
+            <h1>GoalForge - Jewel Joker</h1>
+            <div class="dev-badge">DEVELOPER: GEORGE WHITAKER</div>
+            <p style="color: #94a3b8; line-height: 1.6; margin-top: 25px;">
+                Welcome to my developer space. I am dedicated to crafting robust tools and engaging experiences that help you forge your goals with precision.
+            </p>
+        </div>
+
+        <a href="marketing.html" class="btn-link">Discover My Journey</a>
+    </div>
+</body>
+</html>
